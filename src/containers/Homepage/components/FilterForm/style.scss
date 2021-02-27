@@ -6,4 +6,16 @@
     .searchbox {
         width: 250px;
     }
+    .pointer {
+        color: blue;
+        text-decoration: underline;
+    }
+}
+.advanced-options {
+    display: flex;
+    align-items: center;
+    .filter-item {
+        width: 150px;
+        margin-right: 10px;
+    }
 }
