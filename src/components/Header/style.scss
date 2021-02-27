@@ -1,0 +1,17 @@
+.header-container {
+    box-shadow: 0 5px 6px -5px black;
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 45px;
+        .right-side-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .signin-btn {
+                margin-right: 10px;
+            }
+        }
+    }
+}

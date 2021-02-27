@@ -1,0 +1,18 @@
+.total-results {
+    margin: 15px 0px;
+}
+
+.card {
+    margin-bottom: 15px;
+    .card-content {
+        display: flex;
+        align-items: center;
+        .company-logo {
+            width: 100px;
+            height: 100px;
+        }
+        .comapny-details {
+            margin-left: 10px;
+        }
+    }
+}
