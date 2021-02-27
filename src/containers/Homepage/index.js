@@ -7,6 +7,7 @@ import { bindActionCreators } from "redux";
 import { getJobsAction } from "./action";
 import FilterForm from "./components/FilterForm";
 import JobsList from "./components/JobsList";
+import { showPopup, hidePopup } from "../../components/Popup/action";
 
 class Homepage extends Component {
 
@@ -17,7 +18,7 @@ class Homepage extends Component {
     getSomethingWentWrong = () => <Alert severity="error">Something went wrong!!!</Alert>
 
     render() {
-        let { loading, data, error } = this.props;
+        let { loading, data, error, showPopup, hidePopup } = this.props;
         return (
             <Container className="homepage-container" maxWidth="lg">
                 <Grid container spacing={0}>
@@ -26,7 +27,7 @@ class Homepage extends Component {
                         <div className="jobs-list">
                             {loading ? <CircularProgress /> :
                                 error ? this.getSomethingWentWrong() :
-                                    <JobsList data={data} />}
+                                    <JobsList data={data} showPopup={showPopup} hidePopup={hidePopup} />}
                         </div>
                     </Grid>
                 </Grid>
@@ -42,7 +43,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({ getJobsAction }, dispatch);
+    return bindActionCreators({ getJobsAction, showPopup, hidePopup }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Homepage);

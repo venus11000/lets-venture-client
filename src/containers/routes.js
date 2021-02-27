@@ -35,7 +35,7 @@ class Routes extends Component {
 						<Route exact path="/" component={Homepage} />
 					</div>
 					<Footer />
-					{/* <Popup /> */}
+					<Popup />
 				</Router>
 				<ToastContainer />
 			</React.Fragment>
